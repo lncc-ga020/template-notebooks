@@ -15,8 +15,6 @@ if not project_root_env:
     )
 project_root = Path(project_root_env)
 
-project_root
-
 # %% [markdown]
 # Verificando se a variável de ambiente está correta:
 
