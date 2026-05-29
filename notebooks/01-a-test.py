@@ -8,7 +8,12 @@ import os
 import pandas as pd
 from pathlib import Path
 
-project_root = Path(str(os.getenv("PROJECT_ROOT")))
+project_root_env = os.getenv("PROJECT_ROOT")
+if not project_root_env:
+    raise RuntimeError(
+        "PROJECT_ROOT environment variable must be set before running this notebook."
+    )
+project_root = Path(project_root_env)
 
 project_root
 
